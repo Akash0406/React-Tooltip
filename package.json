@@ -48,7 +48,8 @@
     "url": "git+https://github.com/Akash0406/React-Tooltip.git"
   },
   "keywords": [
-    "Tooltip"
+    "Tooltip",
+    "React-Tooltip"
   ],
   "author": "Akash Kumar Singh",
   "license": "ISC",
