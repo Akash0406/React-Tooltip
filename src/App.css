@@ -1,0 +1,125 @@
+:root {
+  --tooltip-bg: #09889f;
+  --dark: #000;
+  --light: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-image: url("/public/back.jpg");
+}
+
+.App {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 15px 5px;
+  background-color: var(--tooltip-bg);
+  color: var(--light);
+  min-width: 100px;
+  opacity: 0;
+  transition-property: opacity, transform;
+  transform-origin: center center;
+  text-align: center;
+  padding: 10px 40px;
+}
+
+.tooltip--top {
+  transform: translate(-50%, -15px) scale(0);
+}
+.tooltip--bottom {
+  transform: translate(-50%, 15px) scale(0);
+}
+.tooltip--left {
+  transform: translate(-15px, -50%) scale(0);
+}
+.tooltip--right {
+  transform: translate(15px, -50%) scale(0);
+}
+.tooltip::after {
+  border: solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-color: rgba(255,0,0,0);
+  border-width: 6px;
+}
+
+.tooltip--top::after {
+  top: 100%;
+  left: 50%;
+  border-top-color: var(--tooltip-bg);
+  margin-left: -6px;
+}
+.tooltip--bottom::after {
+  bottom: 100%;
+  left: 50%;
+  border-bottom-color: var(--tooltip-bg);
+  margin-left: -6px;
+}
+.tooltip--left::after {
+  top: 50%;
+  left: 100%;
+  border-left-color: var(--tooltip-bg);
+  margin-top: -6px;
+}
+.tooltip--right::after {
+  top: 50%;
+  right: 100%;
+  border-right-color: var(--tooltip-bg);
+  margin-top: -6px;
+}
+
+button {
+  height: 100px;
+  width: 200px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--dark);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  border: 1px solid var(--dark);
+  transition: color .3s ease, background-color .3s ease;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+button:hover, p:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+p {
+  width: 80vw;
+  height: 80px;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 20px;
+  border: 1px solid var(--dark);
+  margin-bottom: 30px;
+  transition: color .3s ease, background-color .3s ease;
+}
