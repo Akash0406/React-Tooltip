@@ -2,11 +2,10 @@ import React, { Fragment, cloneElement, useState, useRef, useEffect } from 'reac
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-// Content
+
 const TooltipContent = ({ tooltipClass, content, position, tooltipPosition, duration }) => {
   const tooltipEl = useRef();
   const targetEl = document.getElementById('root');
-
 
   useEffect(() => {
     const toolTipEle = tooltipEl.current;
