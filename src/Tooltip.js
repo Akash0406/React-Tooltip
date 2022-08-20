@@ -7,6 +7,7 @@ const TooltipContent = ({ tooltipClass, content, position, tooltipPosition, dura
   const tooltipEl = useRef();
   const targetEl = document.getElementById('root');
 
+
   useEffect(() => {
     const toolTipEle = tooltipEl.current;
 
